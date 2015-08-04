@@ -1,0 +1,50 @@
+<head>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<section data-ng-controller="ArticlesController">
+	<div class="page-header">
+		<h1>Publish New Product</h1>
+	</div>
+	<div class="col-md-12">
+		<form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+			<fieldset>
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<label class="control-label" for="title">Title</label>
+					<div class="controls">
+						<input name="title" type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="content">Content</label>
+					<div class="controls">
+						<textarea name="content" data-ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+					</div>
+				</div>
+					<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<label class="control-label" for="title">Price</label>
+					<div class="controls">
+						<input name="title" type="text" data-ng-model="price" id="title" class="form-control" placeholder="Price" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="submit" ng-model-options="{ updateOn: 'default', debounce: {'default': 500, 'blur': 0} }"  class="btn btn-default">
+				</div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+			</fieldset>
+		</form>
+		  <body>
+    <a href="https://plus.google.com/share?url='http://www.w3docs.com/'" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+  src="https://www.gstatic.com/images/icons/gplus-64.png" alt="Share on Google+"/></a>
+  </body>
+
+
+
+		
+
+  </body>
+	</div>
+</section>
